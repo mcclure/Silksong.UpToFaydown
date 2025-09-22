@@ -1,4 +1,5 @@
 using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using Mono.Cecil.Cil;
@@ -12,10 +13,15 @@ namespace Silksong.MakeFloatGreatAgain;
 [HarmonyPatch]
 public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     private static ManualLogSource logger;
+    private static ConfigEntry<bool> enabled;
     private Harmony harmony;
 
     private void Awake() {
         logger = Logger;
+        enabled = Config.Bind("General",
+            "Float Override Input",
+            true,
+            "Whether to enable float override input");
         harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
     }
 
@@ -41,7 +47,8 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     }
 
     private static bool AllowDoubleJump(bool hasDoubleJump, HeroController heroController) {
-        if (Constants.GAME_VERSION == "1.0.28324") {
+        string firstVersion = "1.0.28324";
+        if (!enabled.Value || Constants.GAME_VERSION == firstVersion) {
             return hasDoubleJump;
         }
 
