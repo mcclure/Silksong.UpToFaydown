@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace Silksong.MakeFloatGreatAgain;
 
-[BepInAutoPlugin(id: "io.github.silksong.makefloatgreatagain", name: "Make Float Great Again")]
+[BepInAutoPlugin(id: "demojameson.silksong.makefloatgreatagain", name: "Make Float Great Again")]
 [HarmonyPatch]
 public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     private static ManualLogSource logger;
