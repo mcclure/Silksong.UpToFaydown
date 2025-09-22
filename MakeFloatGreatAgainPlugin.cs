@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace Silksong.MakeFloatGreatAgain;
 
-[BepInAutoPlugin(id: "io.github.silksong.makefloatgreatagain", name: "MakeFloatGreatAgain")]
+[BepInAutoPlugin(id: "io.github.silksong.makefloatgreatagain", name: "Make Float Great Again")]
 [HarmonyPatch]
 public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     private static ManualLogSource logger;
@@ -47,8 +47,7 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     }
 
     private static bool AllowDoubleJump(bool hasDoubleJump, HeroController heroController) {
-        string firstVersion = "1.0.28324";
-        if (!enabled.Value || Constants.GAME_VERSION == firstVersion) {
+        if (!enabled.Value) {
             return hasDoubleJump;
         }
 
