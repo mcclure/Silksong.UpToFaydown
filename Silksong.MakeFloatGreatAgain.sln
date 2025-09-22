@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silksong.MakeFloatGreatAgain", "Silksong.MakeFloatGreatAgain.csproj", "{949E44F6-52C5-49EC-A678-D03B0B67FFD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{949E44F6-52C5-49EC-A678-D03B0B67FFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949E44F6-52C5-49EC-A678-D03B0B67FFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949E44F6-52C5-49EC-A678-D03B0B67FFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949E44F6-52C5-49EC-A678-D03B0B67FFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
