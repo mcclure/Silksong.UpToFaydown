@@ -14,6 +14,7 @@ namespace Silksong.MakeFloatGreatAgain;
 public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
     private static ManualLogSource logger;
     private static ConfigEntry<bool> enabled;
+    private static ConfigEntry<bool> allowDownwardDiagonal;
     private Harmony harmony;
 
     private void Awake() {
@@ -22,6 +23,10 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
             "Float Override Input",
             true,
             "Whether to enable float override input");
+        allowDownwardDiagonal = Config.Bind("General",
+            "Allow Downward Diagonal",
+            false,
+            "Whether to allow diagonal down + jump to trigger floating");
         harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
     }
 
@@ -38,7 +43,7 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
         // if (playerData.hasDoubleJump && AllowDoubleJump() && !doubleJumped...
         if (!ilCursor.TryGotoNext(MoveType.After,
                 instruction => instruction.OpCode == OpCodes.Ldfld &&
-                               instruction.Operand.ToString().EndsWith("hasDoubleJump"))) {
+                               instruction.Operand.ToString().EndsWith(nameof(PlayerData.hasDoubleJump)))) {
             logger.LogWarning("Failed to find instruction in HeroController.CanDoubleJump()");
             return;
         }
@@ -52,8 +57,14 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
         }
 
         var inputActions = heroController.inputHandler.inputActions;
-        if (inputActions.Down.IsPressed && !inputActions.Right.IsPressed && !inputActions.Left.IsPressed) {
-            return false;
+        if (inputActions.Down.IsPressed) {
+            if (allowDownwardDiagonal.Value) {
+                return false;
+            }
+
+            if (!inputActions.Right.IsPressed && !inputActions.Left.IsPressed) {
+                return false;
+            }
         }
 
         return hasDoubleJump;
