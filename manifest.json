@@ -1,0 +1,7 @@
+{
+	"name":"Make_Float_Great_Again",
+	"version_number":"1.2.0",
+	"website_url": "https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain",
+	"description":"Re-add float override input (down + jump, after player has Faydown Cloak).",
+	"dependencies": ["BepInEx-BepInExPack_Silksong-5.4.2303"]
+}
