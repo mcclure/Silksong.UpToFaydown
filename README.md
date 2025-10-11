@@ -2,11 +2,10 @@
 Re-add float override input (down + jump, after player has Faydown Cloak).
 
 In the air, pressing down + jump will allow you to float directly, without needing to perform a double jump first.
-Also supports diagonal down + jump to trigger float, default is disabled. (can be enabled by editing the config file `BepinEx\config\demojameson.silksong.makefloatgreatagain`)
+Also supports diagonal down + jump to trigger float, default is disabled. (can be enabled by editing the config file `BepinEx\config\demojameson.silksong.makefloatgreatagain.cfg`)
 
 <h1>Source:</h1>
 GitHub: <a href = "https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain">https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain</a>
-<br />
 <br />
 
 <h1>To install:</h1>
@@ -23,7 +22,7 @@ https://github.com/BepInEx/BepInEx/releases
 latest stable is currently 5.4.23.4
 
 After unzipping, run the game once, so that the BepInEx folder structure generates
-(ie: there's folders in there apart from just 'core')
+(ie: there's folders in there apart from just `core`)
 
-Then pull this DLL, or folder including the dll in to 
-Hollow Knight <code>Silksong\BepInEx\plugins</code>
+Then pull this DLL, or folder including the dll in to
+<code>Hollow Knight Silksong\BepInEx\plugins</code>
