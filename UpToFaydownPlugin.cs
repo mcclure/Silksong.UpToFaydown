@@ -7,26 +7,21 @@ using MonoMod.Cil;
 using System;
 using System.Reflection;
 
-namespace Silksong.MakeFloatGreatAgain;
+namespace Silksong.UpToFaydown;
 
-[BepInAutoPlugin(id: "demojameson.silksong.makefloatgreatagain", name: "Make Float Great Again")]
+[BepInAutoPlugin(id: "runhello.silksong.uptofaydown", name: "Up to Faydown")]
 [HarmonyPatch]
-public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
+public partial class UpToFaydown : BaseUnityPlugin {
     private static ManualLogSource logger;
     private static ConfigEntry<bool> enabled;
-    private static ConfigEntry<bool> allowDownwardDiagonal;
     private Harmony harmony;
 
     private void Awake() {
         logger = Logger;
         enabled = Config.Bind("General",
-            "Float Override Input",
+            "Faydown Require Up",
             true,
-            "Whether to enable float override input");
-        allowDownwardDiagonal = Config.Bind("General",
-            "Allow Downward Diagonal",
-            false,
-            "Whether to allow diagonal down + jump to trigger floating");
+            "Enable up-to-doublejump requirement");
         harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
     }
 
@@ -58,9 +53,9 @@ public partial class MakeFloatGreatAgainPlugin : BaseUnityPlugin {
 
         var inputActions = heroController.inputHandler.inputActions;
         if (inputActions.Down.IsPressed) {
-            if (allowDownwardDiagonal.Value) {
+            //if (allowDownwardDiagonal.Value) {
                 return false;
-            }
+            //}
 
             if (!inputActions.Right.IsPressed && !inputActions.Left.IsPressed) {
                 return false;

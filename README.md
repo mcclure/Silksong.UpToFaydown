@@ -1,12 +1,15 @@
-<h1>Make Float Great Again</h1>
-Re-add float override input (down + jump, after player has Faydown Cloak).
-
-In the air, pressing down + jump will allow you to float directly, without needing to perform a double jump first.
-Also supports diagonal down + jump to trigger float, default is disabled. (can be enabled by editing the config file `BepinEx\config\demojameson.silksong.makefloatgreatagain.cfg`)
+<h1>UpToFaydown</h1>
+After player has Faydown Cloak, it will only trigger on up+jump, not regular up inputs. This reserves regular jump for the Drifter's Cloak/Float.
 
 <h1>Source:</h1>
-GitHub: <a href = "https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain">https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain</a>
+GitHub: <a href = "https://github.com/mcclure/Silksong.UpToFaydown">https://github.com/mcclure/Silksong.UpToFaydown</a>
 <br />
+
+This is based on <a href="https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain">a mod by DemoJameson</a> which does the opposite (triggers hover when down is held). I release my changes to this plugin as [0-BSD](https://opensource.org/license/0bsd) (public domain) but DemoJameson's license on the basic code still applies.
+
+<h1>To build:</h1>
+
+I use a `makezip.sh` to make the zip but you probably need to change "dotnet.exe" to "dotnet" for it to run on your machine.
 
 <h1>To install:</h1>
 

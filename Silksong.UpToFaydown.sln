@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silksong.MakeFloatGreatAgain", "Silksong.MakeFloatGreatAgain.csproj", "{949E44F6-52C5-49EC-A678-D03B0B67FFD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silksong.UpToFaydown", "Silksong.UpToFaydown.csproj", "{949E44F6-52C5-49EC-A678-D03B0B67FFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,12 +15,12 @@
         </RestoreAdditionalProjectSources>
         <!--Allow access of private members at runtime.-->
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <AssemblyName>MakeFloatGreatAgain</AssemblyName>
+        <AssemblyName>UpToFaydown</AssemblyName>
     </PropertyGroup>
 
     <PropertyGroup>
         <!--These properties will control the generated plugin info. Version is also used by various parts of the build system.-->
-        <AssemblyTitle>Silksong.MakeFloatGreatAgain</AssemblyTitle>
+        <AssemblyTitle>Silksong.UpToFaydown</AssemblyTitle>
         <Version>1.2.0</Version>
     </PropertyGroup>
 
