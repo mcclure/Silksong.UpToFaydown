@@ -1,1 +1,1 @@
-rm -f UpToFaydown.zip && dotnet.exe build -c:Release && cp bin/Release/netstandard2.1/UpToFaydown.dll . && zip -r UpToFaydown.zip UpToFaydown.dll manifest.json && rm -f UpToFaydown.dll
+rm -f UpToFaydown.zip && dotnet.exe build -c:Release && cp bin/Release/netstandard2.1/UpToFaydown.dll . && zip -r UpToFaydown.zip UpToFaydown.dll manifest.json icon.png && rm -f UpToFaydown.dll

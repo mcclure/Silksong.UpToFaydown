@@ -7,6 +7,8 @@ GitHub: <a href = "https://github.com/mcclure/Silksong.UpToFaydown">https://gith
 
 This is based on <a href="https://github.com/DemoJameson/Silksong.MakeFloatGreatAgain">a mod by DemoJameson</a> which does the opposite (triggers hover when down is held). I release my changes to this plugin as [0-BSD](https://opensource.org/license/0bsd) (public domain) but DemoJameson's license on the basic code still applies.
 
+The icon is created from a screenshot of https://gamepadviewer.com .
+
 <h1>To build:</h1>
 
 I use a `makezip.sh` to make the zip but you probably need to change "dotnet.exe" to "dotnet" for it to run on your machine.
