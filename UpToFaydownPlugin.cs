@@ -52,14 +52,8 @@ public partial class UpToFaydown : BaseUnityPlugin {
         }
 
         var inputActions = heroController.inputHandler.inputActions;
-        if (inputActions.Down.IsPressed) {
-            //if (allowDownwardDiagonal.Value) {
-                return false;
-            //}
-
-            if (!inputActions.Right.IsPressed && !inputActions.Left.IsPressed) {
-                return false;
-            }
+        if (!inputActions.Up.IsPressed) {
+            return false;
         }
 
         return hasDoubleJump;
