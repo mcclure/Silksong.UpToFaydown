@@ -1,7 +1,7 @@
 {
 	"name":"Up_To_Faydown",
-	"version_number":"1.2.1",
+	"version_number":"1.2.2",
 	"website_url": "https://github.com/mcclure/Silksong.UpToFaydown",
-	"description":"Require up held when using double-jump/Faydown cloak.",
+	"description":"Require up held when pressing button for Faydown Cloak.",
 	"dependencies": ["BepInEx-BepInExPack_Silksong-5.4.2304"]
 }
